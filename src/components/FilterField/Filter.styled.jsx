@@ -17,6 +17,7 @@ export const FilterInput = styled.input`
   border: 1px solid var(--text-color);
   font-weight: 700;
   background-color: var(--background-color);
+  transition: background-color 500ms ease-in, border 500ms ease-in;
 `;
 
 export const FilterLabel = styled.label`
@@ -24,5 +25,5 @@ export const FilterLabel = styled.label`
   font-weight: 500;
   margin-bottom: 5px;
   color: var(--text-color);
-  background-color: var(--background-color);
+  transition: color 500ms ease-in;
 `;

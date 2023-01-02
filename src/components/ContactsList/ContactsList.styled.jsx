@@ -29,7 +29,7 @@ export const ContactTel = styled.a`
   font-weight: bold;
   color: var(--text-color);
   transition: color 500ms linear;
-  transition: color 250ms ease-in, border 250ms ease-in, color 250ms ease-in;
+  transition: color 250ms ease-in, border 250ms ease-in;
   &:hover,
   &:focus {
     color: tomato;

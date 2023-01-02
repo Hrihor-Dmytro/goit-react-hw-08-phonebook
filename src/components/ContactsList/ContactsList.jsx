@@ -8,10 +8,12 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/contacts/operations';
 import { selectFilter, selectAllContacts } from '../redux/contacts/selectors';
+import { toast } from 'react-hot-toast';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  // const { contacts, filter } = useSelector(getContacts, getFilter);
+  const notify = () => toast.error('Contact deleted!');
+
   const items = useSelector(selectAllContacts);
   const filter = useSelector(selectFilter);
   console.log(filter);
@@ -26,6 +28,7 @@ export const ContactList = () => {
 
   const deleteCard = contactId => {
     dispatch(deleteContact(contactId));
+    notify();
   };
   const neeedCard = getRequiredCard();
   return (

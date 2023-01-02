@@ -10,6 +10,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from '../redux/contacts/operations';
 import { selectAllContacts } from '../redux/contacts/selectors';
+import toast, { Toaster, ToastBar } from 'react-hot-toast';
 
 const schema = yup.object().shape({
   name: yup
@@ -34,6 +35,7 @@ const initialValues = {
   name: '',
   number: '',
 };
+const notify = () => toast.success('Contact added!');
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -41,6 +43,7 @@ export const ContactForm = () => {
 
   const handleSubmit = (values, { resetForm }) => {
     resetForm();
+    notify();
 
     const { name, number } = values;
 
@@ -69,6 +72,23 @@ export const ContactForm = () => {
       validationSchema={schema}
     >
       <FormWrapp autoComplete="off">
+        <Toaster
+          containerStyle={{
+            top: 10,
+          }}
+        >
+          {t => (
+            <ToastBar
+              toast={t}
+              style={{
+                ...t.style,
+                animation: t.visible
+                  ? 'custom-enter 1s ease'
+                  : 'custom-exit 1s ease',
+              }}
+            />
+          )}
+        </Toaster>
         <Label htmlFor="number">Number</Label>
         <Input
           type="tel"
