@@ -10,6 +10,6 @@ export const HomeInfo = styled.div`
 export const Greeting = styled.h1`
   font-size: 40px;
   font-weight: 700;
-  color: white;
+  color: var(--text-color);
   margin-top: 250px;
 `;

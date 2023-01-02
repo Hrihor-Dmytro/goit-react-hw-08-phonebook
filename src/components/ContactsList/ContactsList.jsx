@@ -1,9 +1,9 @@
 import {
-  ContactListMarkup,
-  ContactListItem,
-  ContactListHeader,
-  ContactListText,
-  ContactListButton,
+  SectionList,
+  SectionLi,
+  ContactTitle,
+  ContactTel,
+  ContactButton,
 } from 'components/ContactsList/ContactsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/contacts/operations';
@@ -29,18 +29,18 @@ export const ContactList = () => {
   };
   const neeedCard = getRequiredCard();
   return (
-    <ContactListMarkup>
+    <SectionList>
       {neeedCard.map(({ name, number, id }) => {
         return (
-          <ContactListItem key={id}>
-            <ContactListHeader>{name}</ContactListHeader>
-            <ContactListText>{number}</ContactListText>
-            <ContactListButton type="button" onClick={() => deleteCard(id)}>
+          <SectionLi key={id}>
+            <ContactTitle> {name} </ContactTitle>
+            <ContactTel>{number}</ContactTel>
+            <ContactButton type="button" onClick={() => deleteCard(id)}>
               Delete
-            </ContactListButton>
-          </ContactListItem>
+            </ContactButton>
+          </SectionLi>
         );
       })}
-    </ContactListMarkup>
+    </SectionList>
   );
 };

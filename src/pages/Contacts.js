@@ -21,7 +21,7 @@ export default function Contacts() {
 
   return (
     <div>
-      <Container>PhoneBook</Container>
+      <Container>Phone Book</Container>
       <ContactForm />
       <Container>Contacts</Container>
       <Filter />
