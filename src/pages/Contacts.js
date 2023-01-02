@@ -9,7 +9,7 @@ import {
 } from '../components/redux/contacts/selectors';
 import { fetchContact } from '../components/redux/contacts/operations';
 import { Loader } from '../components/Loader/Loader';
-import { Container } from '../components/ContactEditor/ContactEditor.styled';
+// import { Container } from '../components/ContactEditor/ContactEditor.styled';
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
@@ -21,9 +21,9 @@ export default function Contacts() {
 
   return (
     <div>
-      <Container>Phone Book</Container>
+      <h1>Phone Book</h1>
       <ContactForm />
-      <Container>Contacts</Container>
+      <h1>Contacts</h1>
       <Filter />
       <ContactList />
       {isLoading && !error && <Loader />}
