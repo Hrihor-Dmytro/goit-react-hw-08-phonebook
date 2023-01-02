@@ -13,3 +13,8 @@ export const Greeting = styled.h1`
   color: var(--text-color);
   margin-top: 250px;
 `;
+
+export const HeaderText = styled.h1`
+  text-align: center;
+  color: var(--text-color);
+`;
