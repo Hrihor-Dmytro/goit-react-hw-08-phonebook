@@ -1,5 +1,6 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/FilterField/Filter';
+import { Container } from './ContactEditor.styled';
 
 import { useEffect } from 'react';
 
@@ -18,11 +19,11 @@ export const ContactEditor = () => {
 
   return (
     <div>
-      <h1>PhoneBook</h1>
+      <Container>Phone Book</Container>
       <ContactForm />
       {items.length > 0 && (
         <>
-          <h2>Contacts</h2>
+          <Container>Contacts</Container>
           <Filter />
         </>
       )}

@@ -1,5 +1,3 @@
-// import { Theme } from './Theme/Theme';
-
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes, Navigate } from 'react-router-dom';

@@ -1,5 +1,10 @@
 import { useTheme } from '../hooks/use-theme';
-import { ButtonBox, Buttons } from './Theme.styled';
+import {
+  ButtonBox,
+  Buttons,
+  ButtonsContainer,
+  PContainer,
+} from './Theme.styled';
 
 export const Theme = () => {
   const { theme, setTheme } = useTheme();
@@ -12,13 +17,15 @@ export const Theme = () => {
   };
   return (
     <ButtonBox>
-      <p> Current theme: {theme} </p>
-      <Buttons type="button" onClick={handleLightThemeClick}>
-        Light
-      </Buttons>
-      <Buttons type="button" onClick={handleDarkThemeClick}>
-        Dark
-      </Buttons>
+      <PContainer> Current theme: {theme} </PContainer>
+      <ButtonsContainer>
+        <Buttons type="button" onClick={handleLightThemeClick}>
+          Light
+        </Buttons>
+        <Buttons type="button" onClick={handleDarkThemeClick}>
+          Dark
+        </Buttons>
+      </ButtonsContainer>
     </ButtonBox>
   );
 };

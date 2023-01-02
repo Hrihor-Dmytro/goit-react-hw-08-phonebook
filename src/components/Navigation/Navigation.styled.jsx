@@ -9,14 +9,14 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 21px;
   font-weight: 700;
-  color: #e6ede6;
+  color: var(--text-color);
   margin-left: 20px;
   margin-right: 20px;
   &.active {
-    color: black;
+    color: var(--active-color);
   }
   :hover:not(.active),
   :focus-visible:not(.active) {
-    color: #cfbed9;
+    color: var(--text-color);
   }
 `;

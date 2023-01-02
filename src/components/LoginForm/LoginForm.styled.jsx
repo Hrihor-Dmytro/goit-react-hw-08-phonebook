@@ -18,8 +18,6 @@ export const Input = styled(Field)`
   margin-bottom: 15px;
   padding: 5px;
   border-radius: 5px;
-  outline-color: #9582ee;
-  border-color: #624ec1;
   font-weight: 700;
 `;
 
@@ -37,17 +35,24 @@ export const Label = styled.label`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 5px;
-  color: #cfbed9;
+  color: var(--text-color);
 `;
 
 export const SubmitButton = styled.button`
   width: 150px;
   height: 40px;
-  background-color: #ceaadb;
+  background-color: var(--background-color);
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  outline-color: #533f63;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  transition: color 500ms linear, background-color 500ms linear;
+  &:hover,
+  &:focus {
+    background-color: tomato;
+    border: 2px solid var(--text-color);
+  }
 `;

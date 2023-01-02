@@ -1,5 +1,4 @@
 import { ContactForm } from '../components/ContactForm/ContactForm';
-import { Container } from '../components/App.styled';
 import { Filter } from 'components/FilterField/Filter';
 import { ContactList } from 'components/ContactsList/ContactsList';
 import { useEffect } from 'react';
@@ -10,7 +9,7 @@ import {
 } from '../components/redux/contacts/selectors';
 import { fetchContact } from '../components/redux/contacts/operations';
 import { Loader } from '../components/Loader/Loader';
-
+import { Container } from '../components/ContactEditor/ContactEditor.styled';
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
@@ -21,13 +20,13 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Container>
-      <h1>PhoneBook</h1>
+    <div>
+      <Container>PhoneBook</Container>
       <ContactForm />
-      <h2>Contacts</h2>
+      <Container>Contacts</Container>
       <Filter />
       <ContactList />
       {isLoading && !error && <Loader />}
-    </Container>
+    </div>
   );
 }

@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   transition: color 0.5s linear, background-color 0.5s linear;
+  font-family: 'Gill Sans';
 }
 
 code {
@@ -20,9 +21,11 @@ html[data-theme='dark'] {
   --text-color: rgb(10, 203, 247);
   --background-color: #252525;
   --bottom-color: rgb(59, 141, 149);
+  --active-color: tomato;
 }
 
 html[data-theme='light'] {
   --text-color: #000000;
   --background-color: #faf3f3;
+  --active-color: tomato;
 }

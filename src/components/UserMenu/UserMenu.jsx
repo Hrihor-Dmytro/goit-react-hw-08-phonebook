@@ -15,7 +15,7 @@ export const UserMenu = () => {
   return (
     <RegisterLoginInfo>
       <LoginGreeting>
-        Welcome, &nbsp; <UserName>{user.name}</UserName>
+        Hallo, &nbsp; <UserName>{user.name}</UserName>
       </LoginGreeting>
       <LogButton type="button" onClick={() => dispatch(logOut())}>
         Logout

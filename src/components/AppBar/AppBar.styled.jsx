@@ -7,6 +7,7 @@ export const Header = styled.header`
   font-size: 21px;
   margin-bottom: 16px;
   padding: 25px 30px;
-  background-color: rgb(109 143 177);
-  border-bottom: 1px solid #2a363b;
+  background-color: var(--background-color);
+  border-bottom: 1px solid rgb(42, 54, 59);
+  transition: color 500ms linear, background-color 500ms linear;
 `;

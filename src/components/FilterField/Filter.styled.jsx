@@ -13,14 +13,16 @@ export const FilterInput = styled.input`
   margin-bottom: 15px;
   padding: 5px;
   border-radius: 5px;
-  outline-color: #9582ee;
-  border-color: #624ec1;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
   font-weight: 700;
+  background-color: var(--background-color);
 `;
 
 export const FilterLabel = styled.label`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 5px;
-  color: #cfbed9;
+  color: var(--text-color);
+  background-color: var(--background-color);
 `;
